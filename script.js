@@ -18,8 +18,8 @@ function tampilkanData() {
     document.getElementById("name").textContent = orang.name;
     document.getElementById("role").textContent = orang.role;
     document.getElementById("blood").textContent = orang.blood;
-    document.getElementById("angkatan").textContent = orang.angkatan;
-    document.getElementById("angkatan").textContent = orang.angkatan;
+    document.getElementById("code").textContent = orang.code;
+    document.getElementById("unit").textContent = orang.unit;
     document.getElementById("angkatan").textContent = orang.angkatan;
     // Optional: bisa tambahin angkatan kalau ada elemen-nya
   } else {
