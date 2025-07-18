@@ -12,18 +12,15 @@ function getID() {
 
 function tampilkanData() {
   const id = getID();
-  const hasilDiv = document.getElementById("hasil");
+  document.getElementById("nfc-id").textContent = id || "Tidak Ada";
 
   if (id && dataNFC[id]) {
     const orang = dataNFC[id];
-    hasilDiv.innerHTML = `
-      <p><strong>Nama:</strong> ${orang.nama}</p>
-      <p><strong>Jabatan:</strong> ${orang.jabatan}</p>
-      <p><strong>Angkatan:</strong> ${orang.angkatan}</p>
-    `;
+    document.getElementById("nama").textContent = orang.nama;
+    document.getElementById("jabatan").textContent = orang.jabatan;
   } else {
-    hasilDiv.innerHTML = "<p>Data tidak ditemukan untuk ID: " + (id ?? "kosong") + "</p>";
+    document.getElementById("nama").textContent = "Tidak ditemukan";
+    document.getElementById("jabatan").textContent = "-";
   }
 }
 
-tampilkanData();
