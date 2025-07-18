@@ -1,7 +1,7 @@
 const dataNFC = {
-  "01": { nama: "Raka Ramadhan", jabatan: "Ketua", angkatan: "2023" },
-  "02": { nama: "Salsabila", jabatan: "Sekretaris", angkatan: "2023" },
-  "03": { nama: "Farhan", jabatan: "Bendahara", angkatan: "2022" }
+  "01": { name: "Raka Ramadhan", role: "Ketua", blood: "2023" },
+  "02": { name: "Salsabila", role "Sekretaris", blood: "2023" },
+  "03": { name: "Farhan", role: "Bendahara", blood: "2022" }
 };
 
 function getID() {
@@ -15,8 +15,11 @@ function tampilkanData() {
 
   if (id && dataNFC[id]) {
     const orang = dataNFC[id];
-    document.getElementById("nama").textContent = orang.nama;
-    document.getElementById("jabatan").textContent = orang.jabatan;
+    document.getElementById("name").textContent = orang.name;
+    document.getElementById("role").textContent = orang.role;
+    document.getElementById("blood").textContent = orang.blood;
+    document.getElementById("angkatan").textContent = orang.angkatan;
+    document.getElementById("angkatan").textContent = orang.angkatan;
     document.getElementById("angkatan").textContent = orang.angkatan;
     // Optional: bisa tambahin angkatan kalau ada elemen-nya
   } else {
