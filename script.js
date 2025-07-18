@@ -17,6 +17,7 @@ function tampilkanData() {
     const orang = dataNFC[id];
     document.getElementById("nama").textContent = orang.nama;
     document.getElementById("jabatan").textContent = orang.jabatan;
+    document.getElementById("angkatan").textContent = orang.angkatan;
     // Optional: bisa tambahin angkatan kalau ada elemen-nya
   } else {
     document.getElementById("nama").textContent = "Tidak ditemukan";
