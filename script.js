@@ -20,6 +20,13 @@ const dataNFC = {
     code: "Griller",
     unit: "M4"
   }
+   "Henky": {
+    name: "HENKY",
+    role: "HENKY",
+    blood: "HENKY",
+    code: "HENKY",
+    unit: "HENKY"
+  }
 };
 
 function getIDFromURL() {
