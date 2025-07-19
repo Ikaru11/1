@@ -29,7 +29,7 @@ function getIDFromURL() {
 
 function tampilkanData() {
   const id = getIDFromURL();
-  document.getElementById("nfc-id").textContent = id || "Tidak Ada";
+  document.getElementById("nfc-id").textContent = id || "-";
 
   if (id && dataNFC[id]) {
     const orang = dataNFC[id];
@@ -39,7 +39,7 @@ function tampilkanData() {
     document.getElementById("code").textContent = orang.code;
     document.getElementById("unit").textContent = orang.unit;
   } else {
-    document.getElementById("name").textContent = "Tidak ditemukan";
+    document.getElementById("name").textContent = "-";
     document.getElementById("role").textContent = "-";
     document.getElementById("blood").textContent = "-";
     document.getElementById("code").textContent = "-";
