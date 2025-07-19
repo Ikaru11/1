@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
+
+  <!-- VIDEO INTRO -->
+  <div id="video-intro-container">
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="srt-animation-full.mp4" type="video/mp4" />
+      Browser kamu tidak mendukung video.
+    </video>
+  </div>
+
+  <!-- KONTEN UTAMA (disembunyikan dulu sampai video selesai) -->
+  <div class="container" id="main-content" style="display: none;">
     <header>
       <img src="https://i.imgur.com/JvOK2cQ.png" alt="Team Logo" class="logo"/>
       <h1>SPECIAL RESPOND TEAM</h1>
@@ -39,7 +49,13 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       autoFullscreen();
-      tampilkanData();
+      tampilkanData(); // Jika pakai ID NFC
+
+      const video = document.getElementById('intro-video');
+      video.addEventListener('ended', () => {
+        document.getElementById('video-intro-container').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+      });
     });
   </script>
 </body>
