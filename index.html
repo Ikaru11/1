@@ -5,27 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team Dashboard</title>
   <link rel="stylesheet" href="style.css"/>
-  <style>
-    /* Gaya tombol masuk */
-    #masuk {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #04D9FF;
-      border: none;
-      padding: 12px 24px;
-      font-size: 18px;
-      color: #000;
-      cursor: pointer;
-      border-radius: 10px;
-    }
-  </style>
 </head>
 <body>
-  <button id="masuk">Masuk</button>
-
-  <div class="container" style="display:none">
+  <div class="container">
     <header>
       <img src="https://i.imgur.com/JvOK2cQ.png" alt="Team Logo" class="logo"/>
       <h1>SPECIAL RESPOND TEAM</h1>
@@ -46,25 +28,22 @@
 
   <script src="script.js"></script>
   <script>
-    const tombol = document.getElementById("masuk");
-    const isi = document.querySelector(".container");
-
-    tombol.addEventListener("click", async () => {
-      tombol.style.display = "none";
-      isi.style.display = "block";
-
-      // Masuk fullscreen
+    // Fullscreen otomatis (mungkin tidak semua browser izinkan)
+    async function autoFullscreen() {
       const docElm = document.documentElement;
       if (docElm.requestFullscreen) {
-        await docElm.requestFullscreen();
+        await docElm.requestFullscreen().catch(() => {});
       } else if (docElm.webkitRequestFullscreen) {
-        await docElm.webkitRequestFullscreen();
+        await docElm.webkitRequestFullscreen().catch(() => {});
       }
+    }
 
+    document.addEventListener("DOMContentLoaded", () => {
+      autoFullscreen();
       tampilkanData();
     });
 
-    // Auto-refresh jika keluar lalu kembali
+    // Auto refresh kalau user keluar tab dan kembali
     document.addEventListener("visibilitychange", () => {
       if (document.visibilityState === "visible") {
         location.reload();
