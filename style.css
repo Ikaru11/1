@@ -1,6 +1,11 @@
+@font-face {
+  font-family: 'Bronco';
+  src: url('BRONCOPERSONALUSE.TTF') format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Bronco', sans-serif;
   background: #000;
   color: #04D9FF;
   height: 100vh;
