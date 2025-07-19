@@ -46,4 +46,3 @@ function tampilkanData() {
     document.getElementById("unit").textContent = "-";
   }
 }
-
