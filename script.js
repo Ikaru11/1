@@ -23,7 +23,7 @@ const dataNFC = {
    "723398": {
     name: "Fadel",
     role: "Marksman",
-    blood: "",
+    blood: "?",
     code: "723398",
     unit: "M416"
   },
