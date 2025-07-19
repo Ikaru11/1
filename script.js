@@ -24,7 +24,6 @@ const dataNFC = {
 
 function cariData() {
   const id = document.getElementById("input-id").value.trim();
-  document.getElementById("nfc-id").textContent = id || "-";
 
   if (id && dataNFC[id]) {
     const orang = dataNFC[id];
