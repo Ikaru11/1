@@ -5,9 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team Dashboard</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Gaya tombol masuk */
+    #masuk {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #04D9FF;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: #000;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
+  <button id="masuk">Masuk</button>
+
+  <div class="container" style="display:none">
     <header>
       <img src="https://i.imgur.com/JvOK2cQ.png" alt="Team Logo" class="logo"/>
       <h1>SPECIAL RESPOND TEAM</h1>
@@ -16,9 +34,7 @@
 
     <main>
       <div id="user-info">
-        <p><strong>ID NFC:</strong><br>
-          <input type="text" id="input-id" placeholder="Masukkan ID / Tap NFC" oninput="cariData()" />
-        </p>
+        <p><strong>ID NFC:</strong> <span id="nfc-id">-</span></p>
         <p><strong>Name:</strong> <span id="name">-</span></p>
         <p><strong>Code Name:</strong> <span id="code">-</span></p>
         <p><strong>Role:</strong> <span id="role">-</span></p>
@@ -27,7 +43,33 @@
       </div>
     </main>
   </div>
+
   <script src="script.js"></script>
+  <script>
+    const tombol = document.getElementById("masuk");
+    const isi = document.querySelector(".container");
+
+    tombol.addEventListener("click", async () => {
+      tombol.style.display = "none";
+      isi.style.display = "block";
+
+      // Masuk fullscreen
+      const docElm = document.documentElement;
+      if (docElm.requestFullscreen) {
+        await docElm.requestFullscreen();
+      } else if (docElm.webkitRequestFullscreen) {
+        await docElm.webkitRequestFullscreen();
+      }
+
+      tampilkanData();
+    });
+
+    // Auto-refresh jika keluar lalu kembali
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        location.reload();
+      }
+    });
+  </script>
 </body>
 </html>
-
