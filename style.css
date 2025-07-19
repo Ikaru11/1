@@ -15,12 +15,15 @@ body {
   height: 100vh;
   background: black;
   z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #video-intro-container video {
-  width: 50%;
-  height: 50%;
-  object-fit: center;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .container {
@@ -74,4 +77,3 @@ input[type="text"] {
 input::placeholder {
   color: #04d9ff88;
 }
-
