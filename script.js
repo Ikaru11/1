@@ -26,7 +26,7 @@ const dataNFC = {
     blood: "HENKY",
     code: "HENKY",
     unit: "HENKY"
-  }
+  },
 };
 
 function getIDFromURL() {
