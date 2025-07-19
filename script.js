@@ -19,8 +19,8 @@ const dataNFC = {
     blood: "O+",
     code: "Griller",
     unit: "M4"
-  }
-   "Henky": {
+  },
+   "04": {
     name: "HENKY",
     role: "HENKY",
     blood: "HENKY",
