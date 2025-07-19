@@ -22,14 +22,9 @@ const dataNFC = {
   }
 };
 
-function getID() {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get("id");
-}
-
-function tampilkanData() {
-  const id = getID();
-  document.getElementById("nfc-id").textContent = id || "Tidak Ada";
+function cariData() {
+  const id = document.getElementById("input-id").value.trim();
+  document.getElementById("nfc-id").textContent = id || "-";
 
   if (id && dataNFC[id]) {
     const orang = dataNFC[id];
@@ -46,5 +41,3 @@ function tampilkanData() {
     document.getElementById("unit").textContent = "-";
   }
 }
-
-tampilkanData();
