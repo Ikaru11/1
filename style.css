@@ -20,7 +20,7 @@ body {
 #video-intro-container video {
   width: 50%;
   height: 50%;
-  object-fit: cover;
+  object-fit: center;
 }
 
 .container {
