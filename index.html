@@ -15,8 +15,13 @@
     </header>
 
     <main>
-      <div id="user-info">
-        <p><strong>ID NFC:</strong> <span id="nfc-id">Loading...</span></p>
+      <div id="input-area">
+        <input type="text" id="input-id" placeholder="Masukkan ID NFC" />
+        <button onclick="cariData()">Cari</button>
+      </div>
+
+      <div id="user-info" style="margin-top: 20px;">
+        <p><strong>ID NFC:</strong> <span id="nfc-id">-</span></p>
         <p><strong>Name:</strong> <span id="name">-</span></p>
         <p><strong>Code Name:</strong> <span id="code">-</span></p>
         <p><strong>Role:</strong> <span id="role">-</span></p>
