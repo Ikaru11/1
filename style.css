@@ -64,7 +64,7 @@ h1 {
 }
 
 #user-info {
-  text-align: right; /* 🆕 Tambahan biar kontennya rata kanan */
+  text-align: left; /* 🆕 Tambahan biar kontennya rata kanan */
 }
 
 #user-info p {
