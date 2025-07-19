@@ -28,7 +28,6 @@
 
   <script src="script.js"></script>
   <script>
-    // Fullscreen otomatis (mungkin tidak semua browser izinkan)
     async function autoFullscreen() {
       const docElm = document.documentElement;
       if (docElm.requestFullscreen) {
@@ -40,14 +39,7 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       autoFullscreen();
-      tampilkanData();
-    });
-
-    // Auto refresh kalau user keluar tab dan kembali
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "visible") {
-        location.reload();
-      }
+      tampilkanData(); // Ambil dan tampilkan ID dari URL
     });
   </script>
 </body>
