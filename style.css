@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'Bronco';
+  src: url('BRONCOPERSONALUSE.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Bronco', sans-serif;
   background: #000;
   color: #04D9FF;
   height: 100vh;
@@ -64,7 +71,7 @@ h1 {
 }
 
 #user-info {
-  text-align: left; /* 🆕 Tambahan biar kontennya rata kanan */
+  text-align: right;
 }
 
 #user-info p {
