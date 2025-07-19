@@ -1,31 +1,31 @@
 const dataNFC = {
-  "01": {
+  "404314": {
     name: "Ikaru Marehenka",
     role: "Sniper",
     blood: "A",
     code: "Henkakaru",
     unit: "Barret M82A"
   },
-  "02": {
+  "596868": {
     name: "Nopnop",
     role: "Assault",
     blood: "BA",
     code: "Nophanter",
     unit: "M4 Cyma Jund Tac"
   },
-  "03": {
+  "239176": {
     name: "Boris Kirilovsky",
     role: "Rifleman/Breacher",
     blood: "O+",
     code: "Griller",
-    unit: "M4"
+    unit: "M416"
   },
-   "04": {
-    name: "HENKY",
-    role: "HENKY",
-    blood: "HENKY",
-    code: "HENKY",
-    unit: "HENKY"
+   "723398": {
+    name: "Fadel",
+    role: "Marksman",
+    blood: "",
+    code: "723398",
+    unit: "M416"
   },
 };
 
